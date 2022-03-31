@@ -14,6 +14,10 @@ public class Array1D
 		System.out.println(marks[2]); // 70
 		System.out.println(marks[3]); // 0
 		System.out.println(marks[4]); // 80
+		System.out.println("=======================");
+		for(int i=0 ; i<=4 ; i++) {
+			System.out.println(marks[i]);
+		}
 		
 	}
 }
