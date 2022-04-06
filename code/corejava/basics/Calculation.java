@@ -37,9 +37,9 @@ public class Calculation
 		return ans;
 	}
 	// div: Create a method to accept 2 int numbers and return the div of numbers
-	public int div(int x , int y)
+	public double div(double x , double y)
 	{	
-		int ans = x / y;
+		double ans = x / y;
 		return ans;
 	}
 }
