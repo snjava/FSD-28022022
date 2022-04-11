@@ -12,13 +12,12 @@ public class ObjectDemo
 	}
 }
 
-
 class Employee
 {
 	int id;
 	double salary;
 
-	public void displayEmployee()
+	public static void displayEmployee()
 	{
 		System.out.println("Id : " + id);
 		System.out.println("Salary : " + salary);
