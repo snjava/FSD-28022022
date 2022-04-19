@@ -1,3 +1,5 @@
+// java CommandLineArg 23 34
+
 public class CommandLineArg
 {
 	public static void main(String args[])
