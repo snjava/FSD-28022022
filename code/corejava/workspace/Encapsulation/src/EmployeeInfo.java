@@ -13,16 +13,15 @@ public class EmployeeInfo {
 		emp.displayDetails();
 	}
 	
-	
-	public void swap(int a, int b) {
-		int temp = a;
-		a = b;
-		b = temp;
+	public static void swap(int a, int b) { //a=10, b=20
+		a = a + b; // a = 30
+		b = a - b; // b= 10
+		a = a - b; // a = 20
 	}
 	
 }
 
-
+// These classes are also called as DTO(Data Transfer Object), Entity, Bean, Model, Domain 
 class Employee {
 	private String name;
 	private int id;
@@ -74,6 +73,7 @@ class Student {
 	private String name;
 	private String city;
 	private String dob;
+	
 	public String getName() {
 		return name;
 	}
@@ -92,6 +92,7 @@ class Student {
 	public void setDob(String dob) {
 		this.dob = dob;
 	}
+	
 }
 
 
