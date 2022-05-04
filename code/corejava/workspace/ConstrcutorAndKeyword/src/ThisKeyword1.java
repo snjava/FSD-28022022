@@ -14,7 +14,7 @@ class Student {
 	private String name;
 	private String contact;
 	private String city;
-	private String clgName = "LMN College";
+	private final String clgName = "LMN College";
 
 	public Student(int id, String name, String contact, String city) {
 		this(id,name,contact); // call another constructor of same class
@@ -26,6 +26,13 @@ class Student {
 		super();
 		this.id = id;
 		this.name = name;
+		this.contact = contact;
+	}
+	
+	public Student( String city, int id, String contact) {
+		super();
+		this.id = id;
+		this.city = city;
 		this.contact = contact;
 	}
 
