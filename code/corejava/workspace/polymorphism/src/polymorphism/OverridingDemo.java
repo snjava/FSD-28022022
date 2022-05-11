@@ -10,6 +10,7 @@ public class OverridingDemo {
 		showHomeInterestRate(new SBI());
 		showHomeInterestRate(new ICICI());
 		showHomeInterestRate(new HDFC());
+		showHomeInterestRate(new Bank());
 	}
 	
 	public static void showHomeInterestRate(Bank b) {
