@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class ArrayListDemo2 {
 	public static void main(String[] args) {
-		Vector list = new ArrayList();
+		ArrayList list = new ArrayList();
 		
 		list.add(324);
 		list.add("Abc");
