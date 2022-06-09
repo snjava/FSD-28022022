@@ -12,6 +12,9 @@ public class ArrayListDemo2 {
 		
 		System.out.println(list);
 		
+		//list.remove(new Character('C'));
+		//list.remove(new Integer(324));
+		
 		
 		list.add(2, "XYZ"); // add new value on index and shift the existing value. 
 
