@@ -13,6 +13,20 @@ public class TreeSetDemo {
 		//set.add("Abc"); // java.lang.ClassCastException
 		//set.add(12.34);
 		System.out.println(set);
+		
+		
+		TreeSet set1 = new TreeSet();
+		set1.add("Ravi");
+		set1.add("Suraj");
+		set1.add("Roshni");
+		set1.add("Sunny");
+		set1.add("Josh");
+		set1.add("crishtin");
+		set1.add("Mamta");
+		set1.add("Sunil");
+		
+		System.out.println(set1);
+		
 	}
 
 }
