@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.TreeSet;
 
@@ -14,7 +15,7 @@ public class TreeSetCustomObjectDemo {
 		SortByName nameSort = new SortByName();
 		SortById idSort = new SortById();
 		
-		TreeSet set = new TreeSet(nameSort);
+		TreeSet<Student> set = new TreeSet<Student>(nameSort);
 		set.add(st1); 
 		set.add(st2); 
 		set.add(st3);
@@ -22,7 +23,7 @@ public class TreeSetCustomObjectDemo {
 		set.add(st5);
 		set.add(st6);
 
-		System.out.println(set);
+		System.out.println(set);		
 	}
 }
 
