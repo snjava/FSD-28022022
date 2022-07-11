@@ -17,33 +17,48 @@ import javax.servlet.http.HttpServletResponse;
 public class ValidateUser extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String user = request.getParameter("uname");
-		String pass = request.getParameter("upass");
-		boolean isValidUser = false;
 		
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fsd28feb","root","root");
-			PreparedStatement stmt = con.prepareStatement("Select * from employee where email=? and password=?");
-			stmt.setString(1, user);
-			stmt.setString(2, pass);
+		String action = request.getParameter("action");
+		
+		System.out.println("Action : " + action);
+		
+		
+		if("login".equals(action)) {
+			String user = request.getParameter("uname");
+			String pass = request.getParameter("upass");
+			boolean isValidUser = false;
 			
-			ResultSet rs = stmt.executeQuery();
-			isValidUser = rs.next();
-			con.close();
-		} catch(Exception e) {
-			e.printStackTrace();
+			try {
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/fsd28feb","root","root");
+				PreparedStatement stmt = con.prepareStatement("Select * from employee where email=? and password=?");
+				stmt.setString(1, user);
+				stmt.setString(2, pass);
+				
+				ResultSet rs = stmt.executeQuery();
+				isValidUser = rs.next();
+				con.close();
+			} catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			if(isValidUser) {
+				// Home.jsp
+				RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
+				dis.forward(request, response);
+			}
+			else {
+				// Error.jsp
+				response.sendRedirect("error.jsp");
+			}
 		}
 		
-		if(isValidUser) {
-			// Home.jsp
-			RequestDispatcher dis = request.getRequestDispatcher("home.jsp");
-			dis.forward(request, response);
+		else if("resetpass".equals(action)) {
+			
+			
 		}
-		else {
-			// Error.jsp
-			response.sendRedirect("error.jsp");
-		}
+		
+		
 	}
 
 }

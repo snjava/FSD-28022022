@@ -9,7 +9,7 @@
 <body>
 <div align="center">
 		<h1>Forgot Password</h1>
-		<form action="" method="post">
+		<form action="auth-user?action=resetpass" method="post">
 			Enter User Name : <input type="text" name="uname">
 			<br/><br/>
 			New Password : <input type="password" name="upass">

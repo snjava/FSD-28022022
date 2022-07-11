@@ -9,7 +9,7 @@
 <body>
 	<div align="center">
 		<h1>User Login</h1>
-		<form action="auth-user" method="post">
+		<form action="auth-user?action=login" method="post">
 			Enter User Name : <input type="text" name="uname">
 			<br/><br/>
 			Enter Password : <input type="password" name="upass">
