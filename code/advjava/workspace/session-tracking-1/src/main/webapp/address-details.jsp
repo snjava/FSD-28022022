@@ -12,7 +12,20 @@
 		<h1>Page 2 of 3</h1>
 		<hr>
 	
+		<%
+			String name = request.getParameter("name");
+			String email = request.getParameter("email");
+			String contact = request.getParameter("contact");
+		
+		%>
+	
 		<form action="preview.jsp">
+		
+			<input type="hidden" name="name" value="<%=name%>">
+			<input type="hidden" name="email" value="<%=email%>">
+			<input type="hidden" name="contact" value="<%=contact%>">
+			
+		
 			Enter City : <input type="text" name="city">
 			<br><br>
 			Enter Pin code : <input type="text" name="pincode">
