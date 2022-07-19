@@ -11,7 +11,21 @@
 
 <div align="center">
 	
-	<h3>Previous Search :</h3>
+	<%
+		String value = "No Search Details Available..";
+		Cookie[] cks =  request.getCookies();
+		if(cks != null) {
+			for(Cookie ck : cks) {
+				if(ck.getName().equals("search")) {
+					value = ck.getValue();
+					break;
+				}
+			}
+		}
+	
+	%>
+	
+	<h3>Previous Search : <%= value.replace("*", " ") %></h3>
 
 	<hr>
 
