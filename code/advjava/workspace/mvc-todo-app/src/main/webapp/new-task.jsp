@@ -13,6 +13,27 @@
 
 <div align="center">
 	<h2>Create New Task</h2>
+	<%
+		String msg = "";
+		String color="";
+		String code = request.getParameter("c");
+		if(code!=null) {
+			switch(code) {
+				case "200" :
+					msg = "Task Created SUccessfully";
+					color="green";
+					break;
+				case "500" :
+					msg = "Task Creation Failed";
+					color="red";
+					break;
+			}
+		}
+	
+	%>
+	
+	<h3 style="color: <%=color%>"> <%= msg %></h3>
+	
 	<form action="create-new-task">
 		Task Title : <input name="title">
 		<br><br>
